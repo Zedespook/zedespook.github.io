@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dracula">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.COTPrTjl.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.D2tj61Jd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.BWYulPAh.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.Cewbzyqj.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.CNNvpYCp.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DQCXBtah.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.elqt4f1q.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.Btg7BQDa.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.BFTher6k.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <div class="flex flex-col justify-center items-center mx-4 my-12 md:max-w-xl md:mx-auto"><div class="flex flex-col text-center" data-svelte-h="svelte-vksxqi"><h1 class="text-4xl font-bold">Spiredle (Alpha v1)</h1> <p>Guess a card, get a hint after every try.</p></div> <div class="relative overflow-hidden mt-8"><img alt="Bro, why are you checking the source?" class="h-full object-cover transform scale-[5] origin-[50%_25%]"></div> <p class="font-bold italic" data-svelte-h="svelte-2yk703">Guess the card on the image.</p>  <div class="flex justify-center items-center gap-4 my-8"><input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs"></div> <ul class="w-full"></ul> <ul class="w-full my-8"></ul></div> 
+			
+			<script>
+				{
+					__sveltekit_1gmtsfu = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/sveltekit-github-pages"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.D2tj61Jd.js"),
+						import("./_app/immutable/entry/app.DQCXBtah.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
