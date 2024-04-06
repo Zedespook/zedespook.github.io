@@ -1,4 +1,4 @@
-import{s as r,n as s}from"../chunks/scheduler.Cewbzyqj.js";import{S as i,i as l,e as m,c as o,g as p,a as d,b as x,d as f}from"../chunks/index.elqt4f1q.js";import{b as h}from"../chunks/paths.Dttnh17V.js";function u(n){let e,a=`<section class="text-center"><h1 class="text-6xl flex item-center justify-center gap-2">Hi, I&#39;m
+import{s as r,n as s}from"../chunks/scheduler.Cewbzyqj.js";import{S as i,i as l,e as m,c as o,g as p,a as d,b as x,d as f}from"../chunks/index.elqt4f1q.js";import{b as h}from"../chunks/paths.Ch0Tne6Q.js";function u(n){let e,a=`<section class="text-center"><h1 class="text-6xl flex item-center justify-center gap-2">Hi, I&#39;m
 			<span class="flex items-center bg-secondary rounded md:p-1 p-2 text-secondary-content">Zede.</span></h1> <h2 class="mt-6 text-lg">I&#39;m a
 			<span class="bg-accent p-1 rounded text-accent-content">game</span> &amp;
 			<span class="bg-primary p-1 rounded text-primary-content">web</span>
