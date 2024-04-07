@@ -180,6 +180,7 @@
 		}
 
 		searchResults = [];
+		zoomLevel = zoomLevel > 5 ? zoomLevel - 1 : zoomLevel;
 	}
 
 	function startNewGameWithRandomCard() {
@@ -231,12 +232,21 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Spiredle</title>
+	<meta name="description" content="A Wordle-inspired Slay the Spire fan game." />
+</svelte:head>
+
 <main class="flex flex-col justify-center items-center mx-4 my-12 md:max-w-xl md:mx-auto">
 	<div class="flex flex-col text-center">
 		<div class="flex items-center justify-center text-center gap-4">
 			<h1 class="text-4xl font-bold">Spiredle</h1>
-			<button class="btn btn-primary" on:click={openSettings} disabled={!canChangeSettings}
-				><Icon icon="mdi:settings-outline" class="w-8 h-8" /></button
+			<button
+				id="buttonSettings"
+				title="Settings"
+				class="btn btn-primary"
+				on:click={openSettings}
+				disabled={!canChangeSettings}><Icon icon="mdi:settings-outline" class="w-8 h-8" /></button
 			>
 		</div>
 		<p class="mt-4">Guess a card, get a hint after every try.</p>
@@ -365,7 +375,7 @@
 
 <dialog id="settingsModal" class="modal">
 	<div class="modal-box">
-		<h3 class="font-bold text-lg">Settings</h3>
+		<h2 class="font-bold text-lg">Settings</h2>
 		<p class="text-sm italic mb-4">*You can only change settings before you start guessing.</p>
 
 		<div class="my-2">
