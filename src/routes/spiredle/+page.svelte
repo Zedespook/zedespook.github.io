@@ -83,7 +83,6 @@
 	<div class="flex flex-col text-center">
 		<h1 class="text-4xl font-bold">Spiredle (v2)</h1>
 		<p class="mt-4">Guess a card, get a hint after every try.</p>
-		<a href="/spiredle/changelog" class="text-secondary underline">Changelog</a>
 	</div>
 
 	<div class="relative overflow-hidden mt-8">
