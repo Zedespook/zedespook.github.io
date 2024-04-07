@@ -40,7 +40,7 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"deploy": "bun build && bunx gh-pages -d build -t true"
+		"deploy": "bun run build && bunx gh-pages -d build -t true"
 	},
 	"type": "module"
 }
