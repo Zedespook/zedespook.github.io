@@ -39,6 +39,18 @@
 			.filter((card) => {
 				return card.name.toLowerCase().includes(searchTerm.toLowerCase());
 			})
+			.sort((a, b) => {
+				const aIndex = a.name.toLowerCase().indexOf(searchTerm);
+				const bIndex = b.name.toLowerCase().indexOf(searchTerm);
+
+				if (aIndex === 0 && bIndex !== 0) {
+					return -1;
+				} else if (bIndex === 0 && aIndex !== 0) {
+					return 1;
+				} else {
+					return aIndex - bIndex;
+				}
+			})
 			.slice(0, 5);
 	}
 
@@ -70,7 +82,8 @@
 <div class="flex flex-col justify-center items-center mx-4 my-12 md:max-w-xl md:mx-auto">
 	<div class="flex flex-col text-center">
 		<h1 class="text-4xl font-bold">Spiredle (Alpha v1)</h1>
-		<p>Guess a card, get a hint after every try.</p>
+		<p class="mt-4">Guess a card, get a hint after every try.</p>
+		<a href="/spiredle/changelog" class="text-secondary underline">Changelog</a>
 	</div>
 
 	<div class="relative overflow-hidden mt-8">
@@ -91,22 +104,26 @@
 				</p>
 			{/if}
 		</div>
-	{/if}
 
-	{#if !isWon}
 		<div class="flex justify-center items-center gap-4 my-8">
+			<button class="btn btn-primary" on:click={startNewGameWithRandomCard}
+				>Guess New Random Card</button
+			>
+		</div>
+	{:else}
+		<div class="flex justify-center items-center gap-4 mb-4 mt-8">
+			<button class="text-primary underline" on:click={startNewGameWithRandomCard}
+				>Guess Random Card</button
+			>
+		</div>
+
+		<div class="flex justify-center items-center gap-4 mb-8">
 			<input
 				type="text"
 				placeholder="Type here"
 				class="input input-bordered input-primary w-full max-w-xs"
 				on:input={searchCards}
 			/>
-		</div>
-	{:else}
-		<div class="flex justify-center items-center gap-4 my-8">
-			<button class="btn btn-primary" on:click={startNewGameWithRandomCard}
-				>Guess Random Card</button
-			>
 		</div>
 	{/if}
 
