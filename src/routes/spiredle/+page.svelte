@@ -81,7 +81,7 @@
 
 <div class="flex flex-col justify-center items-center mx-4 my-12 md:max-w-xl md:mx-auto">
 	<div class="flex flex-col text-center">
-		<h1 class="text-4xl font-bold">Spiredle (Alpha v1)</h1>
+		<h1 class="text-4xl font-bold">Spiredle (v2)</h1>
 		<p class="mt-4">Guess a card, get a hint after every try.</p>
 		<a href="/spiredle/changelog" class="text-secondary underline">Changelog</a>
 	</div>
