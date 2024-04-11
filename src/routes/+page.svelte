@@ -1,7 +1,3 @@
-<script lang="ts">
-	import { base } from '$app/paths';
-</script>
-
 <main class="mx-16 md:mx-0 flex flex-col justify-center items-center min-h-[100vh]">
 	<section class="text-center">
 		<h1 class="text-6xl flex item-center justify-center gap-2">
@@ -22,7 +18,7 @@
 		<p>
 			Check out my game
 			<span>
-				<a href="{base}/spiredle" class="underline text-accent">Spiredle</a>
+				<a href="/spiredle" class="underline text-accent">Spiredle</a>
 			</span>
 		</p>
 	</section>
