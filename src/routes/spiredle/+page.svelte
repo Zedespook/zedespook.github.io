@@ -33,6 +33,7 @@
 		allowFiveGuessesOnly: boolean;
 		grayscaleImage: boolean;
 		randomRotation: boolean;
+		showTimer: boolean;
 	};
 
 	let spiredleSettings: SpiredleSettings = {
@@ -41,7 +42,8 @@
 		disableHintOnGuess: false,
 		allowFiveGuessesOnly: false,
 		grayscaleImage: false,
-		randomRotation: false
+		randomRotation: false,
+		showTimer: true
 	};
 
 	let score = 100;
@@ -49,6 +51,11 @@
 	let scoreMultiplier = 1.0;
 	let zoomLevel = 10;
 	let canChangeSettings = true;
+
+	let timer = 0;
+	let timerStarted = false;
+	let timerDisplay = '00:00';
+	let timerInterval: number | undefined;
 
 	$: {
 		if (!loading) {
@@ -86,6 +93,34 @@
 				localStorage.setItem('spiredleOverallScore', overallScore.toString());
 			}
 		}
+	}
+
+	function startTimer() {
+		timer = 0;
+		timerStarted = true;
+		timerInterval = setInterval(() => {
+			timer++;
+			updateTimerDisplay();
+		}, 1000);
+	}
+
+	function stopTimer() {
+		timerStarted = false;
+		clearInterval(timerInterval);
+	}
+
+	function resetTimer() {
+		stopTimer();
+		timer = 0;
+		updateTimerDisplay();
+	}
+
+	function updateTimerDisplay() {
+		const minutes = Math.floor(timer / 60)
+			.toString()
+			.padStart(2, '0');
+		const seconds = (timer % 60).toString().padStart(2, '0');
+		timerDisplay = `${minutes}:${seconds}`;
 	}
 
 	function getSeed() {
@@ -130,6 +165,10 @@
 			.slice(0, 5);
 
 		canChangeSettings = false;
+
+		if (!timerStarted) {
+			startTimer();
+		}
 	}
 
 	function guessCard(card: Card) {
@@ -141,6 +180,7 @@
 			score *= scoreMultiplier;
 			overallScore += score;
 			gameState = GameState.WON;
+			stopTimer();
 
 			if (gameType === GameType.DAILY) {
 				const dailySeedStore = localStorage.getItem('spiredleDailyCompleted');
@@ -157,6 +197,7 @@
 			}
 		} else if (guesses.length === 5 && spiredleSettings.allowFiveGuessesOnly) {
 			gameState = GameState.LOST;
+			stopTimer();
 
 			if (gameType === GameType.DAILY) {
 				const dailySeedStore = localStorage.getItem('spiredleDailyCompleted');
@@ -218,6 +259,7 @@
 		gameState = GameState.PLAYING;
 		gameType = GameType.RANDOM;
 		score = 100;
+		resetTimer();
 		canChangeSettings = true;
 	}
 
@@ -257,6 +299,7 @@
 		}
 
 		loading = false;
+		resetTimer();
 	});
 </script>
 
@@ -296,6 +339,12 @@
 	<div class="flex justify-center items-center gap-4 my-8">
 		<button class="btn btn-primary" on:click={startNewGameWithRandomCard}>Guess Random Card</button>
 	</div>
+
+	{#if spiredleSettings.showTimer}
+		<div class="font-bold">
+			<p>Time Elapsed: {timerDisplay}</p>
+		</div>
+	{/if}
 
 	{#if gameState === GameState.WON}
 		<div class="my-4">
@@ -434,6 +483,21 @@
 		<h2 class="font-bold text-lg">Settings</h2>
 		<p class="text-sm italic mb-4">*You can only change settings before you start guessing.</p>
 
+		<h3 class="font-bold">General</h3>
+		<div class="my-2 mb-4">
+			<div class="form-control">
+				<label class="cursor-pointer label">
+					<span class="label-text">Show timer</span>
+					<input
+						type="checkbox"
+						class="toggle toggle-primary"
+						bind:checked={spiredleSettings.showTimer}
+					/>
+				</label>
+			</div>
+		</div>
+
+		<h3 class="font-bold">Difficulty</h3>
 		<div class="my-2">
 			<div class="form-control">
 				<label class="cursor-pointer label">
