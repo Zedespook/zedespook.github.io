@@ -31,13 +31,17 @@
 		disableZoomOnGuess: boolean;
 		disableHintOnGuess: boolean;
 		allowFiveGuessesOnly: boolean;
+		grayscaleImage: boolean;
+		randomRotation: boolean;
 	};
 
 	let spiredleSettings: SpiredleSettings = {
 		disableSearchImages: false,
 		disableZoomOnGuess: false,
 		disableHintOnGuess: false,
-		allowFiveGuessesOnly: false
+		allowFiveGuessesOnly: false,
+		grayscaleImage: false,
+		randomRotation: false
 	};
 
 	let score = 100;
@@ -67,6 +71,14 @@
 
 				if (spiredleSettings.allowFiveGuessesOnly) {
 					scoreMultiplier += 0.12;
+				}
+
+				if (spiredleSettings.grayscaleImage) {
+					scoreMultiplier += 0.6;
+				}
+
+				if (spiredleSettings.randomRotation) {
+					scoreMultiplier += 0.6;
 				}
 			}
 
@@ -275,7 +287,9 @@
 			src={cardToGuess.image}
 			alt="Bro, why are you checking the source?"
 			class="h-full object-cover transform origin-[50%_25%]"
-			style="scale: {zoomLevel}"
+			style="scale: {zoomLevel}; filter: {spiredleSettings.grayscaleImage
+				? 'grayscale(100%)'
+				: 'none'}; transform: {`rotate(${spiredleSettings.randomRotation ? `${Math.floor(Math.random() * 360)}deg` : '0deg'})`};"
 		/>
 	</div>
 
@@ -461,6 +475,28 @@
 						type="checkbox"
 						class="toggle toggle-primary"
 						bind:checked={spiredleSettings.allowFiveGuessesOnly}
+					/>
+				</label>
+			</div>
+
+			<div class="form-control">
+				<label class="cursor-pointer label">
+					<span class="label-text">Grayscale (black & white) image (+0.06x multiplier)</span>
+					<input
+						type="checkbox"
+						class="toggle toggle-primary"
+						bind:checked={spiredleSettings.grayscaleImage}
+					/>
+				</label>
+			</div>
+
+			<div class="form-control">
+				<label class="cursor-pointer label">
+					<span class="label-text">Random rotation on image (+0.06x multiplier)</span>
+					<input
+						type="checkbox"
+						class="toggle toggle-primary"
+						bind:checked={spiredleSettings.randomRotation}
 					/>
 				</label>
 			</div>
