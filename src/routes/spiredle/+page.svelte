@@ -176,11 +176,27 @@
 				score -= 2;
 			}
 
-			score -= 2;
+			if (!arraysMatch(cardToGuess.attributes.keywords, card.attributes.keywords)) {
+				score -= 2;
+			}
+
+			if (!arraysMatch(cardToGuess.attributes.numbers, card.attributes.numbers)) {
+				score -= 2;
+			}
 		}
 
 		searchResults = [];
 		zoomLevel = zoomLevel > 5 ? zoomLevel - 1 : zoomLevel;
+	}
+
+	function arraysMatch(arr1: any[], arr2: any[]): boolean {
+		if (arr1.length !== arr2.length) return false;
+		const sortedArr1 = [...arr1].sort();
+		const sortedArr2 = [...arr2].sort();
+		for (let i = 0; i < sortedArr1.length; i++) {
+			if (sortedArr1[i] !== sortedArr2[i]) return false;
+		}
+		return true;
 	}
 
 	function startNewGameWithRandomCard() {
@@ -365,6 +381,32 @@
 							class:bg-red-500={card.type !== cardToGuess.type}
 						>
 							{card.type}
+						</div>
+						<div
+							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class:bg-green-500={arraysMatch(
+								cardToGuess.attributes.keywords,
+								card.attributes.keywords
+							)}
+							class:bg-red-500={!arraysMatch(
+								cardToGuess.attributes.keywords,
+								card.attributes.keywords
+							)}
+						>
+							{card.attributes.keywords.join(', ')}
+						</div>
+						<div
+							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class:bg-green-500={arraysMatch(
+								cardToGuess.attributes.numbers,
+								card.attributes.numbers
+							)}
+							class:bg-red-500={!arraysMatch(
+								cardToGuess.attributes.numbers,
+								card.attributes.numbers
+							)}
+						>
+							{card.attributes.numbers.join(', ')}
 						</div>
 					</div>
 				{/if}
