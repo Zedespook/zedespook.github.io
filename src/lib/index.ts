@@ -5,7 +5,10 @@ export type Card = {
 	type: string;
 	energy: string;
 	owner: string;
-	[key: string]: any;
+	attributes: {
+		keywords: string[];
+		numbers: number[];
+	};
 };
 
 export const cards: Card[] = [
@@ -15,7 +18,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Vulnerable'],
+			numbers: [8, 2]
+		}
 	},
 	{
 		name: 'Defend',
@@ -23,7 +30,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Strike',
@@ -31,7 +42,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Anger',
@@ -39,7 +54,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Armaments',
@@ -47,7 +66,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block', 'ALL', 'Upgrade'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Body Slam',
@@ -55,7 +78,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Clash',
@@ -63,7 +90,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: [14]
+		}
 	},
 	{
 		name: 'Cleave',
@@ -71,7 +102,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [8]
+		}
 	},
 	{
 		name: 'Clothesline',
@@ -79,7 +114,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Weak'],
+			numbers: [12, 2]
+		}
 	},
 	{
 		name: 'Flex',
@@ -87,7 +126,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Strength'],
+			numbers: [2, 2]
+		}
 	},
 	{
 		name: 'Havoc',
@@ -95,7 +138,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Headbutt',
@@ -103,7 +150,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Heavy Blade',
@@ -111,7 +162,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Strength'],
+			numbers: [14, 3]
+		}
 	},
 	{
 		name: 'Iron Wave',
@@ -119,7 +174,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [5, 5]
+		}
 	},
 	{
 		name: 'Perfected Strike',
@@ -127,7 +186,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [6, 2]
+		}
 	},
 	{
 		name: 'Pommel Strike',
@@ -135,7 +198,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [9, 1]
+		}
 	},
 	{
 		name: 'Shrug it Off',
@@ -143,7 +210,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block', 'Draw'],
+			numbers: [8, 1]
+		}
 	},
 	{
 		name: 'Sword Boomerang',
@@ -151,7 +222,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['random'],
+			numbers: [3, 3]
+		}
 	},
 	{
 		name: 'Thunderclap',
@@ -159,7 +234,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Vulnerable', 'ALL'],
+			numbers: [4, 1]
+		}
 	},
 	{
 		name: 'True Grit',
@@ -167,7 +246,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Block', 'random'],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Twin Strike',
@@ -175,7 +258,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Warcry',
@@ -183,7 +270,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Draw'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Wild Strike',
@@ -191,7 +282,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Battle Trance',
@@ -199,7 +294,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Blood for Blood',
@@ -207,7 +306,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '4',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [1, 18]
+		}
 	},
 	{
 		name: 'Bloodletting',
@@ -215,7 +318,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [3, 2]
+		}
 	},
 	{
 		name: 'Burning Pact',
@@ -223,7 +330,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Draw'],
+			numbers: [1, 2]
+		}
 	},
 	{
 		name: 'Carnage',
@@ -231,7 +342,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Ethereal'],
+			numbers: [20]
+		}
 	},
 	{
 		name: 'Combust',
@@ -239,7 +354,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [1, 5]
+		}
 	},
 	{
 		name: 'Dark Embrace',
@@ -247,7 +366,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Disarm',
@@ -255,7 +378,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Strength'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Dropkick',
@@ -263,7 +390,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Vulnerable'],
+			numbers: [5, 1, 1]
+		}
 	},
 	{
 		name: 'Dual Wield',
@@ -271,7 +402,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Attack', 'Power'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Entrench',
@@ -279,7 +414,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block', 'Double'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Evolve',
@@ -287,7 +426,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Status'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Feel No Pain',
@@ -295,7 +438,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Fire Breathing',
@@ -303,7 +450,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Status', 'Curse'],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Flame Barrier',
@@ -311,7 +462,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [12, 4]
+		}
 	},
 	{
 		name: 'Ghostly Armor',
@@ -319,7 +474,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block', 'Ethereal'],
+			numbers: [10]
+		}
 	},
 	{
 		name: 'Hemokinesis',
@@ -327,7 +486,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [2, 15]
+		}
 	},
 	{
 		name: 'Infernal Blade',
@@ -335,7 +498,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Attack', 'random'],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Inflame',
@@ -343,7 +510,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Strength'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Intimidate',
@@ -351,7 +522,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Weak', 'ALL'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Metallicize',
@@ -359,7 +534,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Power Through',
@@ -367,7 +546,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [2, 15]
+		}
 	},
 	{
 		name: 'Pummel',
@@ -375,7 +558,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [2, 4]
+		}
 	},
 	{
 		name: 'Rage',
@@ -383,7 +570,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block', 'Attack'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Rampage',
@@ -391,7 +582,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [8, 5]
+		}
 	},
 	{
 		name: 'Reckless Charge',
@@ -399,7 +594,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Rupture',
@@ -407,7 +606,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Strength'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Searing Blow',
@@ -415,7 +618,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Second Wind',
@@ -423,7 +630,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Block', 'Attack'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Seeing Red',
@@ -431,7 +642,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Sentinel',
@@ -439,7 +654,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [5, 2]
+		}
 	},
 	{
 		name: 'Sever Soul',
@@ -447,7 +666,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Attack'],
+			numbers: [16]
+		}
 	},
 	{
 		name: 'Shockwave',
@@ -455,7 +678,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Vulnerable', 'Weak', 'ALL'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Spot Weakness',
@@ -463,7 +690,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Strength'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Uppercut',
@@ -471,7 +702,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Vulnerable', 'Weak'],
+			numbers: [13, 1, 1]
+		}
 	},
 	{
 		name: 'Whirlwind',
@@ -479,7 +714,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: 'X',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Barricade',
@@ -487,7 +726,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Berserk',
@@ -495,7 +738,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Vulnerable', 'Energy', 'At the start'],
+			numbers: [2, 1]
+		}
 	},
 	{
 		name: 'Bludgeon',
@@ -503,7 +750,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '3',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: [],
+			numbers: [32]
+		}
 	},
 	{
 		name: 'Brutality',
@@ -511,7 +762,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Innate', 'At the start'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Corruption',
@@ -519,7 +774,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Skill'],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Demon Form',
@@ -527,7 +786,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Strength', 'At the start'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Double Tap',
@@ -535,7 +798,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Exhume',
@@ -543,7 +810,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Feed',
@@ -551,7 +822,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [10, 3]
+		}
 	},
 	{
 		name: 'Fiend Fire',
@@ -559,7 +834,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Immolate',
@@ -567,7 +846,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [21]
+		}
 	},
 	{
 		name: 'Impervious',
@@ -575,7 +858,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [30]
+		}
 	},
 	{
 		name: 'Juggernaut',
@@ -583,7 +870,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Block', 'random'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Limit Break',
@@ -591,7 +882,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Strength', 'Double'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Offering',
@@ -599,7 +894,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'Draw'],
+			numbers: [6, 2, 3]
+		}
 	},
 	{
 		name: 'Reaper',
@@ -607,7 +906,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Ironclad'
+		owner: 'Ironclad',
+		attributes: {
+			keywords: ['Exhaust', 'ALL'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Defend',
@@ -615,7 +918,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Neutralize',
@@ -623,7 +930,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Weak'],
+			numbers: [3, 1]
+		}
 	},
 	{
 		name: 'Strike',
@@ -631,7 +942,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Survivor',
@@ -639,7 +954,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [8]
+		}
 	},
 	{
 		name: 'Acrobatics',
@@ -647,7 +966,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [3, 1]
+		}
 	},
 	{
 		name: 'Backflip',
@@ -655,7 +978,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block', 'Draw'],
+			numbers: [5, 2]
+		}
 	},
 	{
 		name: 'Bane',
@@ -663,7 +990,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Poison'],
+			numbers: [7, 7]
+		}
 	},
 	{
 		name: 'Blade Dance',
@@ -671,7 +1002,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Shiv'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Cloak And Dagger',
@@ -679,7 +1014,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block', 'Shiv'],
+			numbers: [6, 1]
+		}
 	},
 	{
 		name: 'Dagger Spray',
@@ -687,7 +1026,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Dagger Throw',
@@ -695,7 +1038,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [9, 1, 1]
+		}
 	},
 	{
 		name: 'Deadly Poison',
@@ -703,7 +1050,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Poison'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Deflect',
@@ -711,7 +1062,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Dodge and Roll',
@@ -719,7 +1074,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [4, 4]
+		}
 	},
 	{
 		name: 'Flying Knee',
@@ -727,7 +1086,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [8, 1]
+		}
 	},
 	{
 		name: 'Outmaneuver',
@@ -735,7 +1098,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Piercing Wail',
@@ -743,7 +1110,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Strength', 'ALL'],
+			numbers: [6, 1]
+		}
 	},
 	{
 		name: 'Poisoned Stab',
@@ -751,7 +1122,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Poison'],
+			numbers: [6, 3]
+		}
 	},
 	{
 		name: 'Prepared',
@@ -759,7 +1134,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Quick Slash',
@@ -767,7 +1146,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [8, 1]
+		}
 	},
 	{
 		name: 'Slice',
@@ -775,7 +1158,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Sneaky Strike',
@@ -783,7 +1170,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [12, 2]
+		}
 	},
 	{
 		name: 'Sucker Punch',
@@ -791,7 +1182,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Weak'],
+			numbers: [7, 1]
+		}
 	},
 	{
 		name: 'Accuracy',
@@ -799,7 +1194,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Shiv'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'All-Out Attack',
@@ -807,7 +1206,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['ALL', 'random'],
+			numbers: [10, 1]
+		}
 	},
 	{
 		name: 'Backstab',
@@ -815,7 +1218,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Innate'],
+			numbers: [11]
+		}
 	},
 	{
 		name: 'Blur',
@@ -823,7 +1230,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Bouncing Flask',
@@ -831,7 +1242,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Poison', 'random'],
+			numbers: [3, 3]
+		}
 	},
 	{
 		name: 'Calculated Gamble',
@@ -839,7 +1254,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Caltrops',
@@ -847,7 +1266,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Catalyst',
@@ -855,7 +1278,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Poison', 'Double'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Choke',
@@ -863,7 +1290,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [12, 3]
+		}
 	},
 	{
 		name: 'Concentrate',
@@ -871,7 +1302,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [3, 2]
+		}
 	},
 	{
 		name: 'Crippling Cloud',
@@ -879,7 +1314,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Weak', 'ALL', 'Poison'],
+			numbers: [4, 2]
+		}
 	},
 	{
 		name: 'Dash',
@@ -887,7 +1326,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [10, 10]
+		}
 	},
 	{
 		name: 'Distraction',
@@ -895,7 +1338,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Skill', 'random'],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Endless Agony',
@@ -903,7 +1350,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Escape Plan',
@@ -911,7 +1362,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block', 'Skill', 'Draw'],
+			numbers: [1, 3]
+		}
 	},
 	{
 		name: 'Eviscerate',
@@ -919,7 +1374,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '3',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [1, 7]
+		}
 	},
 	{
 		name: 'Expertise',
@@ -927,7 +1386,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Finisher',
@@ -935,7 +1398,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Flechettes',
@@ -943,7 +1410,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Skill'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Footwork',
@@ -951,7 +1422,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Dexterity'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Heel Hook',
@@ -959,7 +1434,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Weak', 'Energy'],
+			numbers: [5, 1, 1]
+		}
 	},
 	{
 		name: 'Infinite Blades',
@@ -967,7 +1446,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Innate', 'Shiv', 'At the start'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Leg Sweep',
@@ -975,7 +1458,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Weak', 'Block'],
+			numbers: [2, 11]
+		}
 	},
 	{
 		name: 'Masterful Stab',
@@ -983,7 +1470,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [1, 12]
+		}
 	},
 	{
 		name: 'Noxious Fumes',
@@ -991,7 +1482,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['ALL', 'Poison', 'At the start'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Predator',
@@ -999,7 +1494,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [15, 2]
+		}
 	},
 	{
 		name: 'Reflex',
@@ -1007,7 +1506,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Unplayable'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Riddle With Holes',
@@ -1015,7 +1518,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [3, 5]
+		}
 	},
 	{
 		name: 'Setup',
@@ -1023,7 +1530,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Skewer',
@@ -1031,7 +1542,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: 'X',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Tactician',
@@ -1039,7 +1554,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy', 'Unplayable'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Terror',
@@ -1047,7 +1566,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Vulnerable'],
+			numbers: [99]
+		}
 	},
 	{
 		name: 'Well-Laid Plans',
@@ -1055,7 +1578,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Retain'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'A Thousand Cuts',
@@ -1063,7 +1590,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Adrenaline',
@@ -1071,7 +1602,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Draw', 'Energy'],
+			numbers: [1, 2]
+		}
 	},
 	{
 		name: 'After Image',
@@ -1079,7 +1614,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Block', 'Innate'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Alchemize',
@@ -1087,7 +1626,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'random'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Bullet Time',
@@ -1095,7 +1638,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '3',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Burst',
@@ -1103,7 +1650,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Skill'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Corpse Explosion',
@@ -1111,7 +1662,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['ALL', 'Poison'],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Die Die Die',
@@ -1119,7 +1674,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'ALL'],
+			numbers: [13]
+		}
 	},
 	{
 		name: 'Doppelganger',
@@ -1127,7 +1686,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Envenom',
@@ -1135,7 +1698,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Poison'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Glass Knife',
@@ -1143,7 +1710,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: [],
+			numbers: [8, 2]
+		}
 	},
 	{
 		name: 'Grand Finale',
@@ -1151,7 +1722,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [50]
+		}
 	},
 	{
 		name: 'Malaise',
@@ -1159,7 +1734,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust', 'Weak', 'Strength'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Nightmare',
@@ -1167,7 +1746,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '3',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Phantasmal Killer',
@@ -1175,7 +1758,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Storm of Steel',
@@ -1183,7 +1770,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Shiv'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Tools of the Trade',
@@ -1191,7 +1782,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['At the start'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Unload',
@@ -1199,7 +1794,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: [14]
+		}
 	},
 	{
 		name: 'Wraith Form',
@@ -1207,7 +1806,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Silent'
+		owner: 'Silent',
+		attributes: {
+			keywords: ['Dexterity', 'Intangible'],
+			numbers: [2, 1]
+		}
 	},
 	{
 		name: 'Defend',
@@ -1215,7 +1818,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Dualcast',
@@ -1223,7 +1830,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Evoke', 'Orb'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Strike',
@@ -1231,7 +1842,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Zap',
@@ -1239,7 +1854,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Lightning'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Ball Lightning',
@@ -1247,7 +1866,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Lightning'],
+			numbers: [7, 1]
+		}
 	},
 	{
 		name: 'Barrage',
@@ -1255,7 +1878,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Orb'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Beam Cell',
@@ -1263,7 +1890,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Vulnerable'],
+			numbers: [3, 1]
+		}
 	},
 	{
 		name: 'Charge Battery',
@@ -1271,7 +1902,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block', 'Energy'],
+			numbers: [7, 1]
+		}
 	},
 	{
 		name: 'Claw',
@@ -1279,7 +1914,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [3, 2]
+		}
 	},
 	{
 		name: 'Cold Snap',
@@ -1287,7 +1926,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Frost'],
+			numbers: [6, 1]
+		}
 	},
 	{
 		name: 'Compile Driver',
@@ -1295,7 +1938,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Draw', 'Orb'],
+			numbers: [7, 1]
+		}
 	},
 	{
 		name: 'Coolheaded',
@@ -1303,7 +1950,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Draw', 'Channel', 'Frost'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Go for the Eyes',
@@ -1311,7 +1962,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Weak'],
+			numbers: [3, 1]
+		}
 	},
 	{
 		name: 'Hologram',
@@ -1319,7 +1974,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Leap',
@@ -1327,7 +1986,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Rebound',
@@ -1335,7 +1998,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Recursion',
@@ -1343,7 +2010,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Evoke', 'Channel', 'Orb'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Stack',
@@ -1351,7 +2022,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Steam Barrier',
@@ -1359,7 +2034,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [6, 1]
+		}
 	},
 	{
 		name: 'Streamline',
@@ -1367,7 +2046,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [15, 1]
+		}
 	},
 	{
 		name: 'Sweeping Beam',
@@ -1375,7 +2058,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Draw', 'ALL'],
+			numbers: [6, 1]
+		}
 	},
 	{
 		name: 'TURBO',
@@ -1383,7 +2070,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Aggregate',
@@ -1391,7 +2082,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [1, 4]
+		}
 	},
 	{
 		name: 'Auto-Shields',
@@ -1399,7 +2094,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [11]
+		}
 	},
 	{
 		name: 'Blizzard',
@@ -1407,7 +2106,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['ALL', 'Channel', 'Frost'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Boot Sequence',
@@ -1415,7 +2118,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Block', 'Innate'],
+			numbers: [10]
+		}
 	},
 	{
 		name: 'Bullseye',
@@ -1423,7 +2130,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Lock-On'],
+			numbers: [8, 2]
+		}
 	},
 	{
 		name: 'Capacitor',
@@ -1431,7 +2142,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Orb'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Chaos',
@@ -1439,7 +2154,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Orb', 'random'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Chill',
@@ -1447,7 +2166,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Innate', 'Channel', 'Frost'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Consume',
@@ -1455,7 +2178,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Orb', 'Focus'],
+			numbers: [2, 1]
+		}
 	},
 	{
 		name: 'Darkness',
@@ -1463,7 +2190,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Dark'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Defragment',
@@ -1471,7 +2202,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Focus'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Doom and Gloom',
@@ -1479,7 +2214,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['ALL', 'Channel', 'Dark'],
+			numbers: [10, 1]
+		}
 	},
 	{
 		name: 'Double Energy',
@@ -1487,7 +2226,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Energy', 'Double'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Equilibrium',
@@ -1495,7 +2238,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block', 'Retain'],
+			numbers: [13]
+		}
 	},
 	{
 		name: 'FTL',
@@ -1503,7 +2250,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [5, 3, 1]
+		}
 	},
 	{
 		name: 'Force Field',
@@ -1511,7 +2262,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '4',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block', 'Power', 'Energy'],
+			numbers: [1, 12]
+		}
 	},
 	{
 		name: 'Fusion',
@@ -1519,7 +2274,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Plasma'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Genetic Algorithm',
@@ -1527,7 +2286,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [1, 2]
+		}
 	},
 	{
 		name: 'Glacier',
@@ -1535,7 +2298,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block', 'Channel', 'Frost'],
+			numbers: [7, 2]
+		}
 	},
 	{
 		name: 'Heatsinks',
@@ -1543,7 +2310,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Power'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Hello World',
@@ -1551,7 +2322,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Innate', 'At the start', 'random'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Loop',
@@ -1559,7 +2334,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Orb', 'At the start'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Melter',
@@ -1567,7 +2346,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [10]
+		}
 	},
 	{
 		name: 'Overclock',
@@ -1575,7 +2358,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Recycle',
@@ -1583,7 +2370,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Energy'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Reinforced Body',
@@ -1591,7 +2382,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Reprogram',
@@ -1599,7 +2394,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Strength', 'Dexterity', 'Focus'],
+			numbers: [1, 1, 1]
+		}
 	},
 	{
 		name: 'Rip and Tear',
@@ -1607,7 +2406,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['random'],
+			numbers: [7, 2]
+		}
 	},
 	{
 		name: 'Scrape',
@@ -1615,7 +2418,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [7, 4, 0]
+		}
 	},
 	{
 		name: 'Self Repair',
@@ -1623,7 +2430,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Skim',
@@ -1631,7 +2442,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Static Discharge',
@@ -1639,7 +2454,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Lightning'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Storm',
@@ -1647,7 +2466,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Power', 'Innate', 'Channel', 'Lightning'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Sunder',
@@ -1655,7 +2478,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '3',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Energy'],
+			numbers: [24, 3]
+		}
 	},
 	{
 		name: 'Tempest',
@@ -1663,7 +2490,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Channel', 'Lightning'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'White Noise',
@@ -1671,7 +2502,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Power', 'random'],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'All for One',
@@ -1679,7 +2514,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [10, 0]
+		}
 	},
 	{
 		name: 'Amplify',
@@ -1687,7 +2526,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Power'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Biased Cognition',
@@ -1695,7 +2538,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Focus', 'At the start'],
+			numbers: [4, 1]
+		}
 	},
 	{
 		name: 'Buffer',
@@ -1703,7 +2550,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: [],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Core Surge',
@@ -1711,7 +2562,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Artifact'],
+			numbers: [11, 1]
+		}
 	},
 	{
 		name: 'Creative AI',
@@ -1719,7 +2574,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Power', 'At the start', 'random'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Echo Form',
@@ -1727,7 +2586,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Ethereal'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Electrodynamics',
@@ -1735,7 +2598,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['ALL', 'Channel', 'Lightning'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Fission',
@@ -1743,7 +2610,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'ALL', 'Energy', 'Evoke', 'Orb'],
+			numbers: [1, 1]
+		}
 	},
 	{
 		name: 'Hyperbeam',
@@ -1751,7 +2622,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['ALL', 'Focus'],
+			numbers: [26, 3]
+		}
 	},
 	{
 		name: 'Machine Learning',
@@ -1759,7 +2634,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Innate', 'At the start'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Meteor Strike',
@@ -1767,7 +2646,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '5',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Plasma'],
+			numbers: [24, 3]
+		}
 	},
 	{
 		name: 'Multi-Cast',
@@ -1775,7 +2658,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Evoke', 'Orb'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Rainbow',
@@ -1783,7 +2670,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust', 'Channel', 'Lightning', 'Frost', 'Dark'],
+			numbers: [1, 1, 1]
+		}
 	},
 	{
 		name: 'Reboot',
@@ -1791,7 +2682,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Seek',
@@ -1799,7 +2694,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Thunder Strike',
@@ -1807,7 +2706,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '3',
-		owner: 'Defect'
+		owner: 'Defect',
+		attributes: {
+			keywords: ['Channel', 'Lightning', 'random'],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Defend',
@@ -1815,7 +2718,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Eruption',
@@ -1823,7 +2730,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Wrath'],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Strike',
@@ -1831,7 +2742,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Vigilance',
@@ -1839,7 +2754,11 @@ export const cards: Card[] = [
 		rarity: 'Starter',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Calm'],
+			numbers: [8]
+		}
 	},
 	{
 		name: 'Bowling Bash',
@@ -1847,7 +2766,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Consecrate',
@@ -1855,7 +2778,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Crescendo',
@@ -1863,7 +2790,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Retain', 'Wrath'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Crush Joints',
@@ -1871,7 +2802,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Vulnerable'],
+			numbers: [8, 1]
+		}
 	},
 	{
 		name: 'Cut Through Fate',
@@ -1879,7 +2814,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Draw', 'Scry'],
+			numbers: [7, 2, 1]
+		}
 	},
 	{
 		name: 'Empty Body',
@@ -1887,7 +2826,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Stance'],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Empty Fist',
@@ -1895,7 +2838,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Stance'],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Evaluate',
@@ -1903,7 +2850,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Flurry of Blows',
@@ -1911,7 +2862,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Stance'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Flying Sleeves',
@@ -1919,7 +2874,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Retain'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Follow-Up',
@@ -1927,7 +2886,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Attack', 'Energy'],
+			numbers: [7, 1]
+		}
 	},
 	{
 		name: 'Halt',
@@ -1935,7 +2898,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Wrath'],
+			numbers: [3, 9]
+		}
 	},
 	{
 		name: 'Just Lucky',
@@ -1943,7 +2910,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Scry'],
+			numbers: [1, 2, 3]
+		}
 	},
 	{
 		name: 'Pressure Points',
@@ -1951,7 +2922,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [8]
+		}
 	},
 	{
 		name: 'Prostrate',
@@ -1959,7 +2934,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Mantra'],
+			numbers: [2, 4]
+		}
 	},
 	{
 		name: 'Protect',
@@ -1967,7 +2946,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Retain'],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Sash Whip',
@@ -1975,7 +2958,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Weak', 'Attack'],
+			numbers: [8, 1]
+		}
 	},
 	{
 		name: 'Third Eye',
@@ -1983,7 +2970,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Scry'],
+			numbers: [7, 3]
+		}
 	},
 	{
 		name: 'Tranquility',
@@ -1991,7 +2982,11 @@ export const cards: Card[] = [
 		rarity: 'Common',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Retain', 'Calm'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Battle Hymn',
@@ -1999,7 +2994,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Innate', 'At the start'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Carve Reality',
@@ -2007,7 +3006,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Collect',
@@ -2015,7 +3018,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Conclude',
@@ -2023,7 +3030,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Deceive Reality',
@@ -2031,7 +3042,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Empty Mind',
@@ -2039,7 +3054,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Draw', 'Stance'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Fasting',
@@ -2047,7 +3066,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Strength', 'Energy', 'Dexterity'],
+			numbers: [3, 3, 1]
+		}
 	},
 	{
 		name: 'Fear No Evil',
@@ -2055,7 +3078,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Attack', 'Calm'],
+			numbers: [8]
+		}
 	},
 	{
 		name: 'Foreign Influence',
@@ -2063,7 +3090,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Attack'],
+			numbers: [1, 3, 0]
+		}
 	},
 	{
 		name: 'Foresight',
@@ -2071,7 +3102,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Scry', 'At the start'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Indignation',
@@ -2079,7 +3114,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Vulnerable', 'ALL', 'Wrath'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Inner Peace',
@@ -2087,7 +3126,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Calm'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Like Water',
@@ -2095,7 +3138,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Calm'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Meditate',
@@ -2103,7 +3150,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Retain', 'Calm'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Mental Fortress',
@@ -2111,7 +3162,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Stance'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Nirvana',
@@ -2119,7 +3174,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Scry'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Perseverance',
@@ -2127,7 +3186,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Retain'],
+			numbers: [5, 2]
+		}
 	},
 	{
 		name: 'Pray',
@@ -2135,7 +3198,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Mantra'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Reach Heaven',
@@ -2143,7 +3210,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: [10]
+		}
 	},
 	{
 		name: 'Rushdown',
@@ -2151,7 +3222,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Wrath'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Sanctity',
@@ -2159,7 +3234,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Skill'],
+			numbers: [6, 2]
+		}
 	},
 	{
 		name: 'Sands of Time',
@@ -2167,7 +3246,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '4',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Retain'],
+			numbers: [20, 1]
+		}
 	},
 	{
 		name: 'Signature Move',
@@ -2175,7 +3258,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: [30]
+		}
 	},
 	{
 		name: 'Simmering Fury',
@@ -2183,7 +3270,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['At the start', 'Wrath'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Study',
@@ -2191,7 +3282,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Power',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: []
+		}
 	},
 	{
 		name: 'Swivel',
@@ -2199,7 +3294,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block', 'Attack'],
+			numbers: [8, 0]
+		}
 	},
 	{
 		name: 'Talk to the Hand',
@@ -2207,7 +3306,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [5, 2]
+		}
 	},
 	{
 		name: 'Tantrum',
@@ -2215,7 +3318,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Wrath'],
+			numbers: [3, 3]
+		}
 	},
 	{
 		name: 'Wallop',
@@ -2223,7 +3330,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Wave of the Hand',
@@ -2231,7 +3342,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Weak', 'Block', 'ALL'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Weave',
@@ -2239,7 +3354,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Scry'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Wheel Kick',
@@ -2247,7 +3366,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [15, 2]
+		}
 	},
 	{
 		name: 'Windmill Strike',
@@ -2255,7 +3378,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Retain'],
+			numbers: [7, 4]
+		}
 	},
 	{
 		name: 'Worship',
@@ -2263,7 +3390,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Retain', 'Mantra'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Wreath of Flame',
@@ -2271,7 +3402,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Alpha',
@@ -2279,7 +3414,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Innate'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Blasphemy',
@@ -2287,7 +3426,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Retain', 'Divinity'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Brilliance',
@@ -2295,7 +3438,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Mantra'],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Conjure Blade',
@@ -2303,7 +3450,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Deus Ex Machina',
@@ -2311,7 +3462,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: 'Unplayable',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Unplayable'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Deva Form',
@@ -2319,7 +3474,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '3',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Ethereal', 'Energy', 'At the start'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Devotion',
@@ -2327,7 +3486,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['At the start', 'Mantra'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Establishment',
@@ -2335,7 +3498,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Retain', 'Innate'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Judgment',
@@ -2343,7 +3510,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: [],
+			numbers: [30, 0]
+		}
 	},
 	{
 		name: 'Lesson Learned',
@@ -2351,7 +3522,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Upgrade', 'random'],
+			numbers: [10]
+		}
 	},
 	{
 		name: 'Master Reality',
@@ -2359,7 +3534,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Upgrade'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Omniscience',
@@ -2367,7 +3546,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '4',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Ragnarok',
@@ -2375,7 +3558,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '3',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['random'],
+			numbers: [5, 5]
+		}
 	},
 	{
 		name: 'Scrawl',
@@ -2383,7 +3570,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Draw'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Spirit Shield',
@@ -2391,7 +3582,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Vault',
@@ -2399,7 +3594,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '3',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Wish',
@@ -2407,7 +3606,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '3',
-		owner: 'Watcher'
+		owner: 'Watcher',
+		attributes: {
+			keywords: ['Exhaust', 'Strength', 'Plated Armor'],
+			numbers: [6, 3, 25]
+		}
 	},
 	{
 		name: 'Bandage Up',
@@ -2415,7 +3618,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Blind',
@@ -2423,7 +3630,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Weak', 'ALL'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Dark Shackles',
@@ -2431,7 +3642,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Strength'],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Deep Breath',
@@ -2439,7 +3654,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Discovery',
@@ -2447,7 +3666,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'random'],
+			numbers: [1, 3, 0]
+		}
 	},
 	{
 		name: 'Dramatic Entrance',
@@ -2455,7 +3678,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'ALL', 'Innate'],
+			numbers: [8]
+		}
 	},
 	{
 		name: 'Enlightenment',
@@ -2463,7 +3690,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Finesse',
@@ -2471,7 +3702,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Block', 'Draw'],
+			numbers: [2, 1]
+		}
 	},
 	{
 		name: 'Flash of Steel',
@@ -2479,7 +3714,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Draw'],
+			numbers: [3, 1]
+		}
 	},
 	{
 		name: 'Forethought',
@@ -2487,7 +3726,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Good Instincts',
@@ -2495,7 +3738,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Block'],
+			numbers: [6]
+		}
 	},
 	{
 		name: 'Impatience',
@@ -2503,7 +3750,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Attack'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Jack Of All Trades',
@@ -2511,7 +3762,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'random'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Madness',
@@ -2519,7 +3774,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'random'],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Mind Blast',
@@ -2527,7 +3786,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Innate'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Panacea',
@@ -2535,7 +3798,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Artifact'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Panic Button',
@@ -2543,7 +3810,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Block'],
+			numbers: [30, 2]
+		}
 	},
 	{
 		name: 'Purity',
@@ -2551,7 +3822,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Swift Strike',
@@ -2559,7 +3834,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [7]
+		}
 	},
 	{
 		name: 'Trip',
@@ -2567,7 +3846,11 @@ export const cards: Card[] = [
 		rarity: 'Uncommon',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Vulnerable', 'ALL'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Apotheosis',
@@ -2575,7 +3858,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'ALL', 'Upgrade'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Chrysalis',
@@ -2583,7 +3870,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Skill', 'Draw', 'random'],
+			numbers: [3, 0]
+		}
 	},
 	{
 		name: 'Hand of Greed',
@@ -2591,7 +3882,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Attack',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [20, 20]
+		}
 	},
 	{
 		name: 'Magnetism',
@@ -2599,7 +3894,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['At the start', 'random'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Master Of Strategy',
@@ -2607,7 +3906,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Draw'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Mayhem',
@@ -2615,7 +3918,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['At the start'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Metamorphosis',
@@ -2623,7 +3930,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Attack', 'Draw', 'random'],
+			numbers: [3, 0]
+		}
 	},
 	{
 		name: 'Panache',
@@ -2631,7 +3942,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [5, 10]
+		}
 	},
 	{
 		name: 'Sadistic Nature',
@@ -2639,7 +3954,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Power',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [5]
+		}
 	},
 	{
 		name: 'Secret Technique',
@@ -2647,7 +3966,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Skill'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Secret Weapon',
@@ -2655,7 +3978,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Attack'],
+			numbers: []
+		}
 	},
 	{
 		name: 'The Bomb',
@@ -2663,7 +3990,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [3, 40]
+		}
 	},
 	{
 		name: 'Thinking Ahead',
@@ -2671,7 +4002,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Draw'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'Transmutation',
@@ -2679,7 +4014,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: 'X',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Upgrade', 'random'],
+			numbers: [0]
+		}
 	},
 	{
 		name: 'Violence',
@@ -2687,7 +4026,11 @@ export const cards: Card[] = [
 		rarity: 'Rare',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Attack', 'random'],
+			numbers: [3]
+		}
 	},
 	{
 		name: 'Apparition',
@@ -2695,7 +4038,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Ethereal', 'Intangible'],
+			numbers: [1]
+		}
 	},
 	{
 		name: 'Beta',
@@ -2703,7 +4050,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Skill',
 		energy: '2',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Bite',
@@ -2711,7 +4062,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [7, 2]
+		}
 	},
 	{
 		name: 'Expunger',
@@ -2719,7 +4074,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: [],
+			numbers: [9]
+		}
 	},
 	{
 		name: 'Insight',
@@ -2727,7 +4086,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Draw', 'Retain'],
+			numbers: [2]
+		}
 	},
 	{
 		name: 'J.A.X.',
@@ -2735,7 +4098,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Strength'],
+			numbers: [3, 2]
+		}
 	},
 	{
 		name: 'Miracle',
@@ -2743,7 +4110,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Skill',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Retain', 'Energy'],
+			numbers: []
+		}
 	},
 	{
 		name: 'Omega',
@@ -2751,7 +4122,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Power',
 		energy: '3',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['ALL'],
+			numbers: [50]
+		}
 	},
 	{
 		name: 'Ritual Dagger',
@@ -2759,7 +4134,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [15, 3]
+		}
 	},
 	{
 		name: 'Safety',
@@ -2767,7 +4146,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Skill',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Block', 'Retain'],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Shiv',
@@ -2775,7 +4158,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust'],
+			numbers: [4]
+		}
 	},
 	{
 		name: 'Smite',
@@ -2783,7 +4170,11 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Attack',
 		energy: '1',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Retain'],
+			numbers: [12]
+		}
 	},
 	{
 		name: 'Through Violence',
@@ -2791,6 +4182,10 @@ export const cards: Card[] = [
 		rarity: 'Special',
 		type: 'Attack',
 		energy: '0',
-		owner: 'Colorless'
+		owner: 'Colorless',
+		attributes: {
+			keywords: ['Exhaust', 'Retain'],
+			numbers: [20]
+		}
 	}
 ];
