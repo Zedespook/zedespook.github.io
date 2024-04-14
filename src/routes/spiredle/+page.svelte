@@ -324,7 +324,7 @@
 
 	<p class="my-4 font-bold text-lg">Your Overall Score: {overallScore.toFixed(2)}</p>
 
-	<div class="relative overflow-hidden mt-8">
+	<div class="relative overflow-hidden">
 		<img
 			src={cardToGuess.image}
 			alt="Bro, why are you checking the source?"
@@ -335,8 +335,10 @@
 		/>
 	</div>
 
-	<div class="flex justify-center items-center gap-4 my-8">
-		<button class="btn btn-primary" on:click={startNewGameWithRandomCard}>Guess Random Card</button>
+	<div class="flex justify-center items-center gap-4 my-4">
+		<button class="btn btn-sm btn-primary" on:click={startNewGameWithRandomCard}
+			>Guess Random Card</button
+		>
 	</div>
 
 	{#if spiredleSettings.showTimer}
@@ -406,7 +408,7 @@
 		{/each}
 	</ul>
 
-	<ul class="w-full my-8">
+	<ul class="w-full">
 		{#each guesses as card}
 			<li class="my-2">
 				<p class="text-center my-2">
@@ -415,9 +417,9 @@
 				</p>
 
 				{#if !spiredleSettings.disableHintOnGuess}
-					<div class="flex justify-center items-center gap-2">
+					<div class="flex justify-center items-center gap-2 overflow-x-scroll md:overflow-hidden">
 						<div
-							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center text-sm flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.owner === cardToGuess.owner}
 							class:bg-red-500={card.owner !== cardToGuess.owner}
 						>
@@ -426,7 +428,7 @@
 							{card.owner}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center text-sm flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.energy === cardToGuess.energy}
 							class:bg-red-500={card.energy !== cardToGuess.energy}
 						>
@@ -435,25 +437,23 @@
 							{card.energy}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center text-sm flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.rarity === cardToGuess.rarity}
 							class:bg-red-500={card.rarity !== cardToGuess.rarity}
 						>
 							<span class="font-bold">Rarity</span>
-							<!-- Header -->
 							{card.rarity}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center text-sm flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.type === cardToGuess.type}
 							class:bg-red-500={card.type !== cardToGuess.type}
 						>
 							<span class="font-bold">Type</span>
-							<!-- Header -->
 							{card.type}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center text-sm flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={arraysMatch(
 								cardToGuess.attributes.keywords,
 								card.attributes.keywords
@@ -464,11 +464,10 @@
 							)}
 						>
 							<span class="font-bold">Keywords</span>
-							<!-- Header -->
 							{card.attributes.keywords.join(', ')}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center text-sm flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={arraysMatch(
 								cardToGuess.attributes.numbers,
 								card.attributes.numbers
@@ -479,7 +478,6 @@
 							)}
 						>
 							<span class="font-bold">Numbers</span>
-							<!-- Header -->
 							{card.attributes.numbers.join(', ')}
 						</div>
 					</div>
