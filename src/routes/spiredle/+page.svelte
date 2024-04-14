@@ -308,10 +308,10 @@
 	<meta name="description" content="A Wordle-inspired Slay the Spire fan game." />
 </svelte:head>
 
-<main class="flex flex-col justify-center items-center mx-4 my-12 md:max-w-xl md:mx-auto">
+<main class="flex flex-col justify-center items-center mx-4 my-4 md:max-w-xl md:mx-auto">
 	<div class="flex flex-col text-center">
 		<div class="flex items-center justify-center text-center gap-4">
-			<h1 class="text-4xl font-bold">Spiredle</h1>
+			<h1 class="text-3xl font-bold">Spiredle</h1>
 			<button
 				id="buttonSettings"
 				title="Settings"
@@ -320,7 +320,6 @@
 				disabled={!canChangeSettings}><Icon icon="mdi:settings-outline" class="w-8 h-8" /></button
 			>
 		</div>
-		<p class="mt-4">Guess a card, get a hint after every try.</p>
 	</div>
 
 	<p class="my-4 font-bold text-lg">Your Overall Score: {overallScore.toFixed(2)}</p>
@@ -418,35 +417,43 @@
 				{#if !spiredleSettings.disableHintOnGuess}
 					<div class="flex justify-center items-center gap-2">
 						<div
-							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.owner === cardToGuess.owner}
 							class:bg-red-500={card.owner !== cardToGuess.owner}
 						>
+							<span class="font-bold">Owner</span>
+							<!-- Header -->
 							{card.owner}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.energy === cardToGuess.energy}
 							class:bg-red-500={card.energy !== cardToGuess.energy}
 						>
+							<span class="font-bold">Cost</span>
+							<!-- Header -->
 							{card.energy}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.rarity === cardToGuess.rarity}
 							class:bg-red-500={card.rarity !== cardToGuess.rarity}
 						>
+							<span class="font-bold">Rarity</span>
+							<!-- Header -->
 							{card.rarity}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={card.type === cardToGuess.type}
 							class:bg-red-500={card.type !== cardToGuess.type}
 						>
+							<span class="font-bold">Type</span>
+							<!-- Header -->
 							{card.type}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={arraysMatch(
 								cardToGuess.attributes.keywords,
 								card.attributes.keywords
@@ -456,10 +463,12 @@
 								card.attributes.keywords
 							)}
 						>
+							<span class="font-bold">Keywords</span>
+							<!-- Header -->
 							{card.attributes.keywords.join(', ')}
 						</div>
 						<div
-							class="p-4 w-20 h-20 text-center flex items-center text-xs justify-center rounded-lg"
+							class="p-4 w-20 h-20 text-center flex flex-col items-center justify-center rounded-lg"
 							class:bg-green-500={arraysMatch(
 								cardToGuess.attributes.numbers,
 								card.attributes.numbers
@@ -469,6 +478,8 @@
 								card.attributes.numbers
 							)}
 						>
+							<span class="font-bold">Numbers</span>
+							<!-- Header -->
 							{card.attributes.numbers.join(', ')}
 						</div>
 					</div>
@@ -481,13 +492,13 @@
 <dialog id="settingsModal" class="modal">
 	<div class="modal-box">
 		<h2 class="font-bold text-lg">Settings</h2>
-		<p class="text-sm italic mb-4">*You can only change settings before you start guessing.</p>
+		<p class="text-sm italic mb-2">*You can only change settings before you start guessing.</p>
 
-		<h3 class="font-bold">General</h3>
-		<div class="my-2 mb-4">
+		<h3 class="text-sm font-bold my-1">General</h3>
+		<div>
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Show timer</span>
+					<span class="label-text text-xs">Show timer</span>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -497,11 +508,11 @@
 			</div>
 		</div>
 
-		<h3 class="font-bold">Difficulty</h3>
-		<div class="my-2">
+		<h3 class="text-sm font-bold my-1">Difficulty</h3>
+		<div>
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Disable images in search bar (+0.06x multiplier)</span>
+					<span class="label-text text-xs">Disable images in search bar (+0.06x multiplier)</span>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -512,7 +523,7 @@
 
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Disable zoom after every guess (+0.06x multiplier)</span>
+					<span class="label-text text-xs">Disable zoom after every guess (+0.06x multiplier)</span>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -523,7 +534,8 @@
 
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Disable hints after every guess (+0.12x multiplier)</span>
+					<span class="label-text text-xs">Disable hints after every guess (+0.12x multiplier)</span
+					>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -534,7 +546,7 @@
 
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Allow 5 guesses only (+0.12x multiplier)</span>
+					<span class="label-text text-xs">Allow 5 guesses only (+0.12x multiplier)</span>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -545,7 +557,8 @@
 
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Grayscale (black & white) image (+0.06x multiplier)</span>
+					<span class="label-text text-xs">Grayscale (black & white) image (+0.06x multiplier)</span
+					>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -556,7 +569,7 @@
 
 			<div class="form-control">
 				<label class="cursor-pointer label">
-					<span class="label-text">Random rotation on image (+0.06x multiplier)</span>
+					<span class="label-text text-xs">Random rotation on image (+0.06x multiplier)</span>
 					<input
 						type="checkbox"
 						class="toggle toggle-primary"
@@ -566,7 +579,7 @@
 			</div>
 		</div>
 
-		<div class="my-4">
+		<div class="my-1">
 			<p class="font-bold">
 				Score multiplier: {scoreMultiplier.toFixed(2)}x
 			</p>
@@ -574,7 +587,7 @@
 
 		<div class="modal-action">
 			<form method="dialog">
-				<button class="btn mr-1">Close</button>
+				<button class="btn btn-primary btn-sm w-24 mr-1">Done</button>
 			</form>
 		</div>
 	</div>
